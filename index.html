@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameRefill - Магазин игровой валюты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Боковая панель -->
+    <div class="sidebar">
+        <div class="logo">
+            <h1>GameRefill</h1>
+        </div>
+        <ul class="game-list">
+            <li class="game-item active" data-game="pubg">
+                <i class="fas fa-crosshairs"></i>
+                <span>PUBG Mobile</span>
+            </li>
+            <li class="game-item" data-game="genshin">
+                <i class="fas fa-wind"></i>
+                <span>Genshin Impact</span>
+            </li>
+            <li class="game-item" data-game="honkai">
+                <i class="fas fa-rocket"></i>
+                <span>Honkai: Star Rail</span>
+            </li>
+            <li class="game-item" data-game="zzz">
+                <i class="fas fa-gamepad"></i>
+                <span>Zenless Zone Zero</span>
+            </li>
+            <li class="game-item" data-game="arena">
+                <i class="fas fa-shield-alt"></i>
+                <span>Arena Breakout</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="main-content">
+        <!-- Верхняя навигация -->
+        <div class="top-nav">
+            <h2 id="current-game">PUBG Mobile UC</h2>
+        </div>
+
+        <!-- PUBG Mobile -->
+        <div class="game-container active" id="pubg">
+            <div class="game-header">
+                <h1 class="game-title">PUBG Mobile (GLOBAL)</h1>
+                <p class="game-subtitle">Купить UC PUBG Mobile</p>
+            </div>
+
+            <div class="currency-display">
+                <h2><i class="fas fa-coins"></i> Покупка UC для PUBG Mobile</h2>
+            </div>
+
+            <h2 class="section-title">Выберите пакет UC</h2>
+            <div class="packages-table">
+                <div class="package-item">
+                    <div class="package-amount">57 UC</div>
+                    <div class="package-bonus">+ 3 UC бонус</div>
+                    <div class="package-price">$0.99</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">300 UC</div>
+                    <div class="package-bonus">+ 25 UC бонус</div>
+                    <div class="package-price">$3.80</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">600 UC</div>
+                    <div class="package-bonus">+ 60 UC бонус</div>
+                    <div class="package-price">$7.65</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">1500 UC</div>
+                    <div class="package-bonus">+ 300 UC бонус</div>
+                    <div class="package-price">$18.79</div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2 class="section-title">Оформление заказа</h2>
+                <div class="form-group">
+                    <label for="pubg-uid"><i class="fas fa-user-check"></i> Введите ваш User ID (UID) в PUBG Mobile</label>
+                    <input type="text" id="pubg-uid" placeholder="Например: 5123456789">
+                    <p style="color: #a78bfa; font-size: 0.9rem; margin-top: 8px; font-style: italic;">Где найти UID? Откройте профиль в игре, ваш ID отобразится в верхнем углу.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pubg-confirm-uid"><i class="fas fa-redo"></i> Подтвердите ваш UID</label>
+                    <input type="text" id="pubg-confirm-uid" placeholder="Введите UID еще раз">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pubg-confirm">
+                    <label for="pubg-confirm">Я указал верный UID</label>
+                </div>
+                
+                <button class="buy-btn" id="pubg-buy-btn">
+                    <i class="fas fa-shopping-cart"></i> Купить за $7.65 (300+25 UC)
+                </button>
+            </div>
+
+            <h2 class="section-title">Специальные предложения</h2>
+            <div class="special-offers">
+                <div class="special-offer">
+                    <div class="offer-amount">3000 + 850 UC</div>
+                    <div class="offer-price">$27.96</div>
+                </div>
+                <div class="special-offer">
+                    <div class="offer-amount">6000 + 2100 UC</div>
+                    <div class="offer-price">$49.96</div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что такое UC?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>UC (Unknown Cash) - это внутриигровая валюта в PUBG Mobile, используемая для покупки снаряжения, скинов, лутбоксов и других предметов в игре.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как купить UC?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>1. Выберите пакет UC<br>2. Введите свой UID в PUBG Mobile<br>3. Подтвердите заказ и произведите оплату<br>4. Получите UC на свой игровой аккаунт в течение 5-15 минут</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как подарить UC другому человеку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Просто введите UID получателя при оформлении заказа. После оплаты UC будут зачислены на указанный аккаунт.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Насколько быстро я смогу получить UC после заказа на GameRefill?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Большинство заказов обрабатываются мгновенно. В 95% случаев UC поступают на ваш аккаунт в течение 5-15 минут после подтверждения оплаты. В редких случаях при высокой нагрузке на серверы доставка может занять до 1 часа.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать, если UC не пришли на счет после покупки?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Если UC не поступили на ваш счет в течение 1 часа:</p>
+                        <ul>
+                            <li>Убедитесь, что вы ввели правильный UID</li>
+                            <li>Проверьте почту, указанную при заказе - там должно быть письмо с подтверждением</li>
+                            <li>Если письма нет, проверьте папку "Спам"</li>
+                            <li>Свяжитесь с нашей поддержкой через онлайн-чат или email: support@gamerefill.com</li>
+                            <li>При обращении укажите номер заказа и ваш UID</li>
+                        </ul>
+                        <p>Мы гарантируем возврат средств или доставку UC в течение 24 часов при подтверждении оплаты.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать если указал не правильный UID?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Если вы обнаружили ошибку в UID после оплаты:</p>
+                        <ol>
+                            <li><strong>Немедленно</strong> свяжитесь с нашей поддержкой через онлайн-чат</li>
+                            <li>Предоставьте номер заказа и правильный UID</li>
+                            <li>Если заказ еще не обработан, мы изменим UID в системе</li>
+                            <li>Если UC уже отправлены на неверный UID, мы свяжемся с получателем</li>
+                        </ol>
+                        <p><strong>Важно:</strong> Если UC были доставлены на неверный аккаунт, и мы не можем связаться с его владельцем, возврат средств невозможен. Поэтому всегда тщательно проверяйте UID перед оплатой!</p>
+                        <p>Для предотвращения ошибок используйте кнопку "Копировать UID" в игре вместо ручного ввода.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Genshin Impact -->
+        <div class="game-container" id="genshin">
+            <div class="game-header">
+                <h1 class="game-title">Genshin Impact</h1>
+                <p class="game-subtitle">Купить Genesis Crystals (Примогемы)</p>
+            </div>
+
+            <div class="packages-table">
+                <div class="package-item">
+                    <div class="package-amount">60 GC</div>
+                    <div class="package-bonus">Blessing of the Welkin Moon</div>
+                    <div class="package-price">$6.40</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">300 + 30</div>
+                    <div class="package-bonus">Genesis Crystals</div>
+                    <div class="package-price">$8.80</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">980 + 110</div>
+                    <div class="package-bonus">Genesis Crystals</div>
+                    <div class="package-price">$32.80</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">1980 + 260</div>
+                    <div class="package-bonus">Genesis Crystals</div>
+                    <div class="package-price">$64.80</div>
+                </div>
+            </div>
+
+            <div class="special-offers">
+                <div class="special-offer">
+                    <div class="offer-amount">3280 + 600</div>
+                    <div class="offer-price">$98.78</div>
+                </div>
+                <div class="special-offer">
+                    <div class="offer-amount">6480 + 1600</div>
+                    <div class="offer-price">$198.78</div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2 class="section-title">Оформление заказа</h2>
+                <div class="form-group">
+                    <label><i class="fas fa-user-check"></i> Genshin Impact - 300 + 30 GC</label>
+                    <input type="text" placeholder="Введите UID" id="genshin-uid">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-server"></i> Выберите сервер</label>
+                    <select id="genshin-server">
+                        <option value="america">Америка</option>
+                        <option value="europe">Европа</option>
+                        <option value="asia">Азия</option>
+                        <option value="tw">TW, HK, MO</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-gift"></i> Введите промо код (если есть)</label>
+                    <input type="text" placeholder="Промо код" id="genshin-promo">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="genshin-confirm">
+                    <label for="genshin-confirm">Я указал верный UID и сервер</label>
+                </div>
+                
+                <button class="buy-btn" id="genshin-buy-btn">
+                    <i class="fas fa-shopping-cart"></i> Купить за $44.80
+                </button>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что такое Genesis Crystals?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Genesis Crystals (Генезис Кристаллы) - это премиальная валюта в Genshin Impact, которая используется для покупки предметов, героев и оружия в игре.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как купить Genesis Crystals?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>1. Выберите пакет Genesis Crystals<br>2. Введите свой UID в Genshin Impact<br>3. Выберите сервер<br>4. Подтвердите заказ и произведите оплату<br>5. Получите кристаллы на свой аккаунт</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как подарить Genesis Crystals другому человеку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Просто введите UID получателя при оформлении заказа и выберите его сервер. После оплаты кристаллы будут зачислены на указанный аккаунт.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Насколько быстро я смогу получить Genesis Crystals после заказа на GameRefill?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Большинство заказов обрабатываются мгновенно. Genesis Crystals поступают на ваш аккаунт в течение 5-15 минут после подтверждения оплаты.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать, если Genesis Crystals не пришли на счет после покупки?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Если Genesis Crystals не поступили на ваш счет в течение 1 часа, свяжитесь с нашей поддержкой через онлайн-чат или email: support@gamerefill.com</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать если указал не правильный UID?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Немедленно свяжитесь с нашей поддержкой. Если заказ еще не обработан, мы изменим UID в системе.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honkai: Star Rail -->
+        <div class="game-container" id="honkai">
+            <div class="game-header">
+                <h1 class="game-title">Honkai: Star Rail</h1>
+                <p class="game-subtitle">Купить Сущности для Honkai: Star Rail</p>
+            </div>
+
+            <div class="packages-table">
+                <div class="package-item">
+                    <div class="package-amount">60 OS</div>
+                    <div class="package-bonus">Пропуск снабжения экспресса</div>
+                    <div class="package-price">$5.39</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">300 + 30</div>
+                    <div class="package-bonus">Oneiric Shards</div>
+                    <div class="package-price">$6.77</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">980 + 110</div>
+                    <div class="package-bonus">Oneiric Shards</div>
+                    <div class="package-price">$34.39</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">1980 + 260</div>
+                    <div class="package-bonus">Oneiric Shards</div>
+                    <div class="package-price">$108.29</div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2 class="section-title">Оформление заказа</h2>
+                <div class="form-group">
+                    <label><i class="fas fa-user-check"></i> Honkai: Star Rail - 300 + 30 OS</label>
+                    <input type="text" placeholder="Введите UID" id="honkai-uid">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-server"></i> Выберите сервер</label>
+                    <select id="honkai-server">
+                        <option value="america">Америка</option>
+                        <option value="europe">Европа</option>
+                        <option value="asia">Азия</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-gift"></i> Введите промо код</label>
+                    <input type="text" placeholder="Промо код" id="honkai-promo">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="honkai-confirm">
+                    <label for="honkai-confirm">Я указал верный UID и сервер</label>
+                </div>
+                
+                <button class="buy-btn" id="honkai-buy-btn">
+                    <i class="fas fa-shopping-cart"></i> Купить за $34.50
+                </button>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Сущности древних снов и Пропуск снабжения экспресса - зачем они нужны?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Сущности древних снов (Oneiric Shards) - это основная премиальная валюта в Honkai: Star Rail, используемая для покупки различных предметов, героев и улучшений. Пропуск снабжения экспресса - это ежемесячная подписка, которая ежедневно предоставляет игровые ресурсы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Сколько Пропусков снабжения экспресса можно купить в Honkai: Star Rail?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Одновременно можно активировать только один Пропуск снабжения экспресса. После истечения текущего пропуска можно приобрести новый.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как подарить Сущности или Пропуск другому человеку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Просто введите UID получателя при оформлении заказа и выберите его сервер. После оплаты валюта будет зачислена на указанный аккаунт.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Насколько быстро происходит доставка Сущностей или Пропуска в Honkai: Star Rail после заказа на GameRefill?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Доставка происходит в течение 5-15 минут после подтверждения оплаты.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать, если валюта не пришла на счет в Honkai: Star Rail после покупки?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Свяжитесь с нашей поддержкой через онлайн-чат или email: support@gamerefill.com</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать если указал не правильный UID?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Немедленно свяжитесь с нашей поддержкой для изменения UID.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zenless Zone Zero -->
+        <div class="game-container" id="zzz">
+            <div class="game-header">
+                <h1 class="game-title">Zenless Zone Zero (ZZZ)</h1>
+                <p class="game-subtitle">Купить Монокромы для Zenless Zone Zero</p>
+            </div>
+
+            <div class="packages-table">
+                <div class="package-item">
+                    <div class="package-amount">60</div>
+                    <div class="package-bonus">Интернет подписка</div>
+                    <div class="package-price">$2.56</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">300 + 30</div>
+                    <div class="package-bonus">Монокромы</div>
+                    <div class="package-price">$6.80</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">980 + 110</div>
+                    <div class="package-bonus">Монокромы</div>
+                    <div class="package-price">$32.60</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">1980 + 260</div>
+                    <div class="package-bonus">Монокромы</div>
+                    <div class="package-price">$97.50</div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2 class="section-title">Оформление заказа</h2>
+                <div class="form-group">
+                    <label><i class="fas fa-user-check"></i> Zenless Zone Zero - 300 + 30</label>
+                    <input type="text" placeholder="Введите UID" id="zzz-uid">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-server"></i> Выберите сервер</label>
+                    <select id="zzz-server">
+                        <option value="america">Америка</option>
+                        <option value="europe">Европа</option>
+                        <option value="asia">Азия</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-gift"></i> Введите промо код</label>
+                    <input type="text" placeholder="Промо код" id="zzz-promo">
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="zzz-confirm">
+                    <label for="zzz-confirm">Я указал верный UID и сервер</label>
+                </div>
+                
+                <button class="buy-btn" id="zzz-buy-btn">
+                    <i class="fas fa-shopping-cart"></i> Купить за $32.80
+                </button>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Монокромы и Интернет подписка - зачем они нужны?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Монокромы - это основная премиальная валюта в Zenless Zone Zero, используемая для покупки различных предметов и улучшений. Интернет подписка - это ежемесячная подписка, которая предоставляет ежедневные бонусы и привилегии.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что такое бонус первого пополнения в Zenless Zone Zero?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Бонус первого пополнения - это дополнительное количество монокром, которое вы получаете при первой покупке определенного пакета.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Интернет-подписка - сколько раз можно это сделать в ZZZ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Интернет-подписку можно приобретать каждый месяц. Одновременно может быть активна только одна подписка.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arena Breakout -->
+        <div class="game-container" id="arena">
+            <div class="game-header">
+                <h1 class="game-title">Arena Breakout (Mobile)</h1>
+                <p class="game-subtitle">Купить облигации Arena Breakout</p>
+            </div>
+
+            <div class="packages-table">
+                <div class="package-item">
+                    <div class="package-amount">60 + 6</div>
+                    <div class="package-bonus">Облигации</div>
+                    <div class="package-price">$0.99</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">310 + 25</div>
+                    <div class="package-bonus">Облигации</div>
+                    <div class="package-price">$4.80</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">630 + 45</div>
+                    <div class="package-bonus">Облигации</div>
+                    <div class="package-price">$9.60</div>
+                </div>
+                <div class="package-item">
+                    <div class="package-amount">1580 + 110</div>
+                    <div class="package-bonus">Облигации</div>
+                    <div class="package-price">$23.80</div>
+                </div>
+            </div>
+
+            <div class="special-offers">
+                <div class="special-offer">
+                    <div class="offer-amount">3000 + 850</div>
+                    <div class="offer-price">$49.90</div>
+                </div>
+                <div class="special-offer">
+                    <div class="offer-amount">6000 + 2100</div>
+                    <div class="offer-price">$89.90</div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <h2 class="section-title">Оформление заказа</h2>
+                <div class="form-group">
+                    <label><i class="fas fa-user-check"></i> Arena Breakout (Mobile) - 630 + 45</label>
+                    <input type="text" placeholder="Введите UID" id="arena-uid">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-server"></i> Выберите сервер</label>
+                    <select id="arena-server">
+                        <option value="america">Америка</option>
+                        <option value="europe">Европа</option>
+                        <option value="asia">Азия</option>
+                    </select>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="arena-confirm-uid">
+                    <label for="arena-confirm-uid">Я указал верный UID</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="arena-confirm-server">
+                    <label for="arena-confirm-server">Я указал верный сервер</label>
+                </div>
+                
+                <button class="buy-btn" id="arena-buy-btn">
+                    <i class="fas fa-shopping-cart"></i> Купить за $9.60 (630+45)
+                </button>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Облигации Arena Breakout – зачем они нужны?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Облигации - это внутриигровая валюта в Arena Breakout, используемая для покупки снаряжения, оружия, улучшений и косметических предметов в игре.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Боевой пропуск Arena Breakout – зачем они нужны?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Боевой пропуск предоставляет эксклюзивные награды, скины оружия, экипировку и другие предметы по мере повышения уровня. Это отличный способ получить ценные предметы по доступной цене.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Набор наемника Arena Breakout – зачем они нужны?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Наборы наемника содержат специальную экипировку, оружие и другие предметы, которые помогают быстрее прогрессировать в игре и получить преимущество в бою.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Как подарить Облигации, Боевой пропуск, Подписку или набор другому человеку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Просто введите UID получателя при оформлении заказа и выберите его сервер. После оплаты предметы будут зачислены на указанный аккаунт.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Насколько быстро поступят облигации в Arena Breakout после заказа на GameRefill?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Доставка происходит в течение 5-15 минут после подтверждения оплаты. В редких случаях при высокой нагрузке может занять до 1 часа.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span><i class="fas fa-question-circle"></i> Что делать, если Облигации, Боевой пропуск, Подписка или набор не пришли на счет в Arena Breakout после покупки?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Если предметы не поступили на ваш счет в течение 1 часа, свяжитесь с нашей поддержкой через онлайн-чат или email: support@gamerefill.com с указанием номера заказа и вашего UID.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer">
+            <p>GameRefill © 2025. Все права защищены. Все торговые марки являются собственностью соответствующих правообладателей.</p>
+            <p style="margin-top: 10px;">
+                <i class="fas fa-shield-alt"></i> Безопасные платежи | 
+                <i class="fas fa-headset"></i> Круглосуточная поддержка | 
+                <i class="fas fa-bolt"></i> Мгновенная доставка
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
